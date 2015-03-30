@@ -5,7 +5,6 @@ class SampleController extends AppController {
 
 	public function index(){
 		$this-> autoRender = false;
-		$this-> redirect("./other/");
 	}
 	
 	public function other(){
