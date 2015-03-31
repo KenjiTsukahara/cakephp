@@ -4,6 +4,13 @@
 	</head>
 	<body>
 		<h1>index page</h1>
-		<p>this is test view</p>
+		<p>message:<?php echo $msg; ?></p>
+		<div>
+			<ul>
+				<?php foreach ($datas as $data) : ?>
+				<li><?php echo $data; ?></li>
+				<?php endforeach; ?>
+			</ul>
+		</div>
 	</body>
 </html>
