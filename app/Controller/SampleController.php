@@ -5,7 +5,18 @@ App::uses('Sanitize', 'Utility');
  
 class SampleController extends AppController {
  
-  public function index() {}
+  public function index() {
+
+	$this->modelClass = null;
+	if($this->request->data){
+		
+		$result = Sanitize::stripAll($this->request->data['text1']);	} else {
+		$result = "no data";
+	}
+		$this->set("result",$result);
+
+  }	
+
  
   public function form() {
     $text1 = $this -> data["text1"];
